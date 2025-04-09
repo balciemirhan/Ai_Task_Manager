@@ -1,0 +1,82 @@
+name: myapp
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Adjusted SDK constraint for broader compatibility
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core & State Management
+  flutter_bloc: ^9.1.0
+  equatable: ^2.0.5
+
+  # Firebase
+  firebase_core: ^3.3.0
+  firebase_auth: ^5.1.3
+
+  # Local Storage
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.0.0 # Match Isar version
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.3 # Added for onboarding status
+
+  # Routing
+  go_router: ^14.2.0
+
+  # UI & Design
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  flutter_animate: ^4.5.0
+  rive: ^0.13.20
+  lottie: ^3.1.2
+  smooth_page_indicator: ^1.1.0 # Added for onboarding page indicator
+
+  # Features
+  table_calendar: ^3.1.2
+  fl_chart: ^0.70.2
+  flutter_local_notifications: ^19.0.0
+
+  # Utilities
+  intl: ^0.20.2 # For localization and date formatting
+
+
+dependency_overrides:
+  isar_flutter_libs:
+    path: packages/isar_flutter_libs
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+  # Isar Code Generation
+  isar_generator: ^3.1.0+1 # Match Isar version
+  build_runner: ^2.4.11
+
+flutter:
+  uses-material-design: true
+
+  # Add assets like fonts, images, illustrations, rive animations, lottie files here
+  assets: 
+   - assets/images/
+   - assets/lottie/
+  #   - assets/icons/
+  #   - assets/illustrations/
+  #   - assets/rive/
+
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
